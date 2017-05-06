@@ -1,0 +1,26 @@
+{
+  "name": "wyDux",
+  "version": "1.0.0",
+  "description": "Spotify application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zooll8/wydux.git"
+  },
+  "author": "Zaurbek Zhakupov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zooll8/wydux/issues"
+  },
+  "homepage": "https://github.com/Zooll8/wydux#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
+}

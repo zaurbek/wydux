@@ -1,0 +1,11 @@
+{
+    "extends": "airbnb",
+    "rules": {
+    "linebreak-style": 0
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ]
+}
