@@ -1,0 +1,18 @@
+.col {
+    border: 1px solid red;
+    height: 100vh;
+}
+
+.window {
+    min-width: 30vw;
+    max-width: 30vw;
+    height: 60vh;
+    border: 1px solid purple;
+}
+
+.player {
+    min-width: 30vw;
+    max-width: 30vw;
+    height: 40vh;
+    border: 1px solid lightgreen;
+}
