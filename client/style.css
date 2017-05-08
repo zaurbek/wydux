@@ -1,18 +1,104 @@
-.col {
-    border: 1px solid red;
+.col-left {
+    float: left;
     height: 100vh;
+    width: 300px;
+}
+
+.col-right {
+    overflow:auto;
+    height: 100vh;
+    background-color:#333;
 }
 
 .window {
-    min-width: 30vw;
-    max-width: 30vw;
+    background-color: #334;
+    width: 300px;
     height: 60vh;
-    border: 1px solid purple;
+    padding: 10px
 }
 
 .player {
-    min-width: 30vw;
-    max-width: 30vw;
+    width: 300px;
     height: 40vh;
-    border: 1px solid lightgreen;
+    text-align: center;
+    overflow: hidden;
+}
+
+.track-img {
+    width: 160px;
+    height: 160px;
+    margin: 20px auto;
+}
+
+.img-unwrapped {
+    width: 100%;
+    height: 100%;
+}
+
+.play-btn {
+    margin: 0 auto;
+    
+}
+
+.from-top {
+    margin-top: 30px;
+}
+
+.search-bar {
+    border-radius: 30px;
+    width: 290px;
+    align-self: center;
+    margin: 10px auto;
+}
+
+.track-card {
+    width: 102px;
+    height: 220px;
+    float: left;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 0px !important;
+    -webkit-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
+box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
+background-color: #DCDCDC;
+    color: #333;
+    overflow: hidden;
+}
+.tracks-store {
+    width: 976px;
+    margin: 10px auto;
+}
+
+.extra-margin-top {
+    margin-top: 45px;
+}
+
+
+.clear-both {
+    clear: both;
+}
+
+.card-img {
+    height: 100px;
+    width: 100px;
+    display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+td {
+    vertical-align: middle !important;
+}
+
+.tracks--table--progress {
+    height: 15px;
+    padding-top: 20px !important;
+}
+
+.progress {
+    margin-top: -10px !important;
+    margin-bottom: -10px !important;
 }
