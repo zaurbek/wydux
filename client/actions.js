@@ -9,6 +9,8 @@ function plugTracks(fetch) {
   };
 }
 
+
+
 export function newSearch(text) {
   return function (dispatch) {
     if (text.length > 0) {
@@ -20,4 +22,22 @@ export function newSearch(text) {
             return dispatch(plugTracks({ tracks:{},albums:{},playlists:{},artists:{} }))
         }
   };
+}
+
+
+export function playTrack(trackObject) {
+  const parsed={
+    url:trackObject.preview_url,
+    img:trackObject.album.images[0].url
+  }
+  return {
+    type: 'PLAY_TRACK',
+    payload: parsed
+  }
+}
+
+export function togglePlay() {
+  return {
+    type: 'TOGGLE_PLAY'
+  }
 }

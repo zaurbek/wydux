@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { onSearch, newSearch } from '../actions.js';
+import { onSearch, newSearch, playTrack } from '../actions.js';
 
 function msToMS(ms) {
     var minutes = Math.floor(ms/60000)
@@ -16,9 +16,10 @@ class Right extends Component {
   }
   tableTracks() {
     return (
-        <table className="table table-striped table-hover ">
+        <table className="table table-striped table-hover right-table">
              <thead>
     <tr>
+      <th>Play:</th>
       <th>Artist:</th>
       <th>Name:</th>
       <th>Popularity:</th>
@@ -29,6 +30,7 @@ class Right extends Component {
     {this.props.tracks.map((item, index) => (
 
       <tr key={index}>
+              <td><button className="btn btn-xs btn-success" href='#' onClick={()=>this.props.playTrack(item)}>!</button></td>
               <td>{item.artists[0].name}</td>
               <td>{item.name}</td>
               <td className="tracks--table--progress"><div className="progress">
@@ -89,6 +91,7 @@ class Right extends Component {
           {(this.props.tracks) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Tracks:</h3><hr /></div>) : null}
           {(this.props.tracks) ? this.tableTracks() : null }
         </div>
+        
       </div>
     );
   }
@@ -103,6 +106,7 @@ const RightWrapped = connect(
     }),
     dispatch => ({
       onSearch: text => dispatch(newSearch(text)),
+      playTrack: object => dispatch(playTrack(object))
     }),
 )(Right);
 
