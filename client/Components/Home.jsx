@@ -107,7 +107,7 @@ const HomeWrapped = connect(
     dispatch => ({
       onSearch: text => dispatch(newSearch(text)),
       playTrack: object => dispatch(playTrack(object))
-    }),
+    })
 )(Home);
 
 export default HomeWrapped
