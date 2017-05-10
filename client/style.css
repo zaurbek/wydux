@@ -123,3 +123,8 @@ td {
 .right-margin {
     margin-bottom: 100px;
 }
+
+
+#audio {
+    width: 100%;
+}

@@ -9,7 +9,7 @@ function msToMS(ms) {
     return minutes+':'+seconds;
 }
 
-class Right extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.props = props;
@@ -55,9 +55,9 @@ class Right extends Component {
           {(this.props.albums) ? (<div className=" extra-margin-top "><h3 className="text-center">Albums:</h3><hr /></div>) : null}
           {(this.props.albums) ? this.props.albums.map(item => (
               <div className="well track-card" key={item.id}>
-                  <img className="card-img" src={item.images[1].url}  /><br  />
+                  <a href={`/album/${item.id}`}><img className="card-img" src={item.images[1].url}  /><br  />
 
-                  {item.name}
+                  {item.name}</a>
 
 
                 </div>
@@ -67,9 +67,9 @@ class Right extends Component {
           {(this.props.artists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top ">Artists:</h3><hr /></div>) : null}
           {(this.props.artists) ? this.props.artists.map(item => (
               <div className="well track-card" key={item.id}>
-                  <img className="card-img" src={item.images[1].url}  /><br  />
+                   <a href={`/artist/${item.id}`}><img className="card-img" src={item.images[1].url}  /><br  />
 
-                  {item.name}
+                  {item.name}</a>
 
 
                 </div>
@@ -79,9 +79,9 @@ class Right extends Component {
           {(this.props.playlists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Playlists:</h3><hr /></div>) : null}
           {(this.props.playlists) ? this.props.playlists.map(item => (
               <div className="well track-card" key={item.id}>
-                  <img className="card-img" src={item.images.length > 1 ? item.images[1].url:item.images[0].url}  /><br  />
+                   <a href={`/playlist/${item.id}`}><img className="card-img" src={item.images.length > 1 ? item.images[1].url:item.images[0].url}  /><br  />
 
-                  {item.name}
+                  {item.name}</a>
 
 
                 </div>
@@ -97,7 +97,7 @@ class Right extends Component {
   }
 }
 
-const RightWrapped = connect(
+const HomeWrapped = connect(
     state => ({
       tracks: state.fetch.albums.items ? (state.fetch.tracks.items.length > 0 ? state.fetch.tracks.items : null) : null,
       artists: state.fetch.albums.items ? (state.fetch.artists.items.length > 0 ? state.fetch.albums.items : null) : null,
@@ -108,7 +108,7 @@ const RightWrapped = connect(
       onSearch: text => dispatch(newSearch(text)),
       playTrack: object => dispatch(playTrack(object))
     }),
-)(Right);
+)(Home);
 
-export default RightWrapped
+export default HomeWrapped
 ;

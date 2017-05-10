@@ -1,4 +1,4 @@
-export default function (state = { isPLaying: false, trackURL: '', trackIMG: '', auth: false, fetch: { tracks:{},albums:{},playlists:{},artists:{} }}, action ) {
+export default function (state = { isPlaying: false, trackURL: '', trackIMG: '', auth: false, fetch: { tracks:{},albums:{},playlists:{},artists:{} }}, action ) {
   switch (action.type) {
     case 'TOGGLE_PLAY':
       return {
