@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './Home.jsx'
 import Player from './Player.jsx';
 import Album from './Album.jsx';
+import Artist from './Artist.jsx';
 
 const Main = () => (
   <Router>
@@ -24,7 +25,7 @@ const Main = () => (
       
       <Route exact path='/' component={Home}/>
       <Route path='/album/:id' component={Album}/>
-      <Route path='/artist/:id' component={Home}/>
+      <Route path='/artist/:id' component={Artist}/>
       <Route path='/playlist/:id' component={Home}/>
     </div>
   </Router>

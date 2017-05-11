@@ -3,18 +3,69 @@
     height: 100vh;
     width: 200px;
 }
+.clear-left {
+    clear: left;
+}
 
 .col-right {
     overflow:auto;
     height: 100vh;
-    background-color:#333;
+    background-color:#222222;
+    padding-bottom: 80px;
 }
 .top-ref {
-    height: 450px;
-    border: 2px solid purple;
+    height: 300px;
+    width: 600px;
+    display: flex;
+    margin: 40px auto;
+    
+    padding: 10px;
+    background-color: #333;
+    -webkit-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+}
+
+.top-ref-image {
+    float: left;
+    height: 280px;
+    width: 280px;
+    margin-right: 30px;
+}
+
+.top-ref-artist {
+    height: 400px;
+    width: 800px;
+    display: flex;
+    margin: 40px auto;
+    
+    padding: 10px;
+    background-color: #333;
+    -webkit-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+overflow: auto;
+}
+
+.top-ref-artist-image {
+    float: left;
+    height: 380px;
+    width: 380px;
+    margin-right: 30px;
+}
+
+.card-link {
+    color: #222;
+    font-decoration: none;
+    font-size: 12px;
+}
+
+.card-link:hover {
+    color: #222;
+    font-decoration: none
 }
 .page-store {
-    width: 976px;
+    width: 990px;
     margin: 10px auto;
 }
 
@@ -44,6 +95,7 @@
     height: 50vh;
     text-align: center;
     overflow: hidden;
+    background-color: #111;
 }
 
 .track-img {
@@ -74,10 +126,13 @@
     align-self: center;
     margin: 10px auto;
 }
-
+.margin-around {
+    margin: 10px;
+}
 .track-card {
-    width: 102px;
-    height: 220px;
+    position: relative;
+    width: 145px;
+    height: 270px;
     float: left;
     border: 2px solid #333;
     margin: 10px;
@@ -89,8 +144,22 @@ background-color: #DCDCDC;
     color: #333;
     overflow: hidden;
 }
+.track-card:hover .overlay{
+    opacity: 0.5;
+}
 
-
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #777;
+}
 .extra-margin-top {
     margin-top: 45px;
 }
@@ -101,8 +170,8 @@ background-color: #DCDCDC;
 }
 
 .card-img {
-    height: 100px;
-    width: 100px;
+    height: 145px;
+    width: 145px;
     display:block;
   margin-left:auto;
   margin-right:auto;

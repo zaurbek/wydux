@@ -56,9 +56,9 @@ class Home extends Component {
           {(this.props.albums) ? (<div className=" extra-margin-top "><h3 className="text-center">Albums:</h3><hr /></div>) : null}
           {(this.props.albums) ? this.props.albums.map(item => (
               <div className="well track-card" key={item.id}>
-                  <Link to={`/album/${item.id}`}><img className="card-img" src={item.images[1].url}  /><br  />
+                  <Link className="card-link" to={`/album/${item.id}`}><img className="card-img" src={item.images[1] ? item.images[1].url : item.images[0].url}  /><br  />
 
-                  {item.name}</Link>
+                  <div className='overlay'/><div className="margin-around">{item.name}</div></Link>
 
 
                 </div>
@@ -68,16 +68,16 @@ class Home extends Component {
           {(this.props.artists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top ">Artists:</h3><hr /></div>) : null}
           {(this.props.artists) ? this.props.artists.map(item => (
               <div className="well track-card" key={item.id}>
-                   <Link to={`/artist/${item.id}`}><img className="card-img" src={item.images[1].url}  /><br  />
+                   <Link className="card-link" to={`/artist/${item.id}`}><img className="card-img" src={item.images[0] ? item.images[0].url : 'http://vignette3.wikia.nocookie.net/k-anime/images/6/60/No_Image_Available.png/revision/latest?cb=20130418072455'}  /><br  />
 
-                  {item.name}</Link>
+                  <div className='overlay'/><div className="margin-around">{item.name}</div></Link>
 
 
                 </div>
                       )) : null
               }
           <div className="clear-both" />
-          {(this.props.playlists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Playlists:</h3><hr /></div>) : null}
+          {/*(this.props.playlists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Playlists:</h3><hr /></div>) : null}
           {(this.props.playlists) ? this.props.playlists.map(item => (
               <div className="well track-card" key={item.id}>
                    <Link to={`/playlist/${item.id}`}><img className="card-img" src={item.images.length > 1 ? item.images[1].url:item.images[0].url}  /><br  />
@@ -87,8 +87,7 @@ class Home extends Component {
 
                 </div>
                       )) : null
-              }
-          <div className="clear-both" />
+            */  }
           {(this.props.tracks) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Tracks:</h3><hr /></div>) : null}
           {(this.props.tracks) ? this.tableTracks() : null }
         </div>
@@ -101,7 +100,7 @@ class Home extends Component {
 const HomeWrapped = connect(
     state => ({
       tracks: state.fetch.albums.items ? (state.fetch.tracks.items.length > 0 ? state.fetch.tracks.items : null) : null,
-      artists: state.fetch.albums.items ? (state.fetch.artists.items.length > 0 ? state.fetch.albums.items : null) : null,
+      artists: state.fetch.artists.items ? (state.fetch.artists.items.length > 0 ? state.fetch.artists.items : null) : null,
       playlists: state.fetch.albums.items ? (state.fetch.playlists.items.length > 0 ? state.fetch.playlists.items : null) : null,
       albums: state.fetch.albums.items ? (state.fetch.albums.items.length > 0 ? state.fetch.albums.items : null) : null,
     }),
