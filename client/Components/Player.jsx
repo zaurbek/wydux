@@ -10,7 +10,7 @@ class Player extends React.Component {
 
   render() {
           return (<div className="player">
-          {this.props.isPlaying ? <div><button className="btn btn-success play-btn btn-xs">{this.props.isPlaying ? 'Stop' : 'Play'}</button>
+          {this.props.isPlaying ? <div>
           <img alt="track logo" className="img-unwrapped" src={this.props.trackIMG !== '' ? this.props.trackIMG : 'http://blueroom.org.au/wp-content/uploads/2016/12/BLANK_SN-Website-760x485.jpg'} />
           <audio id="audio" autoPlay controls src={this.props.trackURL} /></div> : null }
         </div>)

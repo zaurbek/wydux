@@ -8,7 +8,14 @@
     overflow:auto;
     height: 100vh;
     background-color:#333;
-    
+}
+.top-ref {
+    height: 450px;
+    border: 2px solid purple;
+}
+.page-store {
+    width: 976px;
+    margin: 10px auto;
 }
 
 .window {
@@ -73,7 +80,6 @@
     height: 220px;
     float: left;
     border: 2px solid #333;
-    border-radius: 5px;
     margin: 10px;
     padding: 0px !important;
     -webkit-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
@@ -83,10 +89,7 @@ background-color: #DCDCDC;
     color: #333;
     overflow: hidden;
 }
-.tracks-store {
-    width: 976px;
-    margin: 10px auto;
-}
+
 
 .extra-margin-top {
     margin-top: 45px;

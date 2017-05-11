@@ -6,7 +6,7 @@ import { createDevTools } from 'redux-devtools';
 import thunk from 'redux-thunk';
 
 import reducer from './rootReducer.js';
-import { OuterApp } from './Components/index.js';
+import WrappedApp from './Components/WrappedApp.jsx';
 
 const store = createStore(reducer, compose(applyMiddleware(thunk), window.devToolsExtension
     ? window.devToolsExtension()
@@ -14,5 +14,5 @@ const store = createStore(reducer, compose(applyMiddleware(thunk), window.devToo
 
 ReactDOM.render(
   <Provider store={store}>
-      <OuterApp/>
+    <WrappedApp  />
   </Provider>, document.getElementById('root'));
