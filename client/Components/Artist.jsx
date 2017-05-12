@@ -45,7 +45,7 @@ class Album extends Component {
                             <img src={this.props.artist.images[0]?this.props.artist.images[0].url:'http://vignette3.wikia.nocookie.net/k-anime/images/6/60/No_Image_Available.png/revision/latest?cb=20130418072455'} className="top-ref-artist-image"/>
                             <div className="cleat-both">
                             <h4>{this.props.artist.name}</h4>
-                            
+                            <span><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/share" className="twitter-share-button" data-show-count="false" data-size='large'>Tweet</a><script async src="http://platform.twitter.com/widgets.js" charSet="utf-8" ></script></span>
                             <h5> Type: Artist </h5>
                             <h5> Followers: {this.props.artist.followers.total} </h5>
                             <h5> Genres: </h5>

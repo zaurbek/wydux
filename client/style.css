@@ -3,9 +3,6 @@
     height: 100vh;
     width: 200px;
 }
-.clear-left {
-    clear: left;
-}
 
 .col-right {
     overflow:auto;
@@ -24,6 +21,26 @@
     -webkit-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
 -moz-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
 box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+}
+
+.content {
+    flex: 1 0 auto;
+}
+.browser-window {
+    display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.player-bottom {
+    flex: 0 0 auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    -webkit-box-shadow: 0px -5px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -5px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -5px 40px 0px rgba(0,0,0,0.75);
 }
 
 .top-ref-image {
@@ -55,39 +72,45 @@ overflow: auto;
 }
 
 .card-link {
-    color: #222;
     font-decoration: none;
     font-size: 12px;
 }
 
-.card-link:hover {
+.card-link a:hover {
     color: #222;
-    font-decoration: none
+    text-decoration: none
 }
 .page-store {
     width: 990px;
     margin: 10px auto;
 }
-
+.logo {
+    text-align: center;
+    background-color: #222;
+}
+.logo a:hover {
+    text-decoration: none
+}
+.track-card a:hover {
+    text-decoration: none
+}
 .window {
     background-color: #334;
     width: 200px;
-    height: 20vh;
+    height: 100vh;
+    -webkit-box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
+box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
 }
 
 .user {
     width: 200px;
-    height: 20vh;
+    height: 50vh;
     padding: 10px;
     display: table; 
+    font-size: 20px;
 }
 
-.genres {
-    width: 200px;
-    height: 30vh;
-    padding: 10px;
-    background-color: green; 
-}
 
 
 .player {
@@ -95,7 +118,7 @@ overflow: auto;
     height: 50vh;
     text-align: center;
     overflow: hidden;
-    background-color: #111;
+    background-color: #222;
 }
 
 .track-img {
@@ -122,9 +145,10 @@ overflow: auto;
 
 .search-bar {
     border-radius: 30px;
-    width: 220px;
+    width: 270px;
     align-self: center;
     margin: 10px auto;
+    
 }
 .margin-around {
     margin: 10px;
@@ -132,21 +156,21 @@ overflow: auto;
 .track-card {
     position: relative;
     width: 145px;
-    height: 270px;
+    height: 250px;
     float: left;
-    border: 2px solid #333;
     margin: 10px;
     padding: 0px !important;
     -webkit-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
 box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
-background-color: #DCDCDC;
-    color: #333;
+background-color: #333;
+    color: #FFF;
     overflow: hidden;
 }
 .track-card:hover .overlay{
-    opacity: 0.5;
+    opacity: 0.4;
 }
+
 
 .overlay {
   position: absolute;

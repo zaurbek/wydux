@@ -1,32 +1,34 @@
-export default function(state = {
+export default function (state = {
   album: {
     name: '',
     tracks: {
-      items: []
+      items: [],
     },
     artists: [],
-    label: ''
+    label: '',
   },
   artist: {
     name: '',
     images: [],
     followers: {
-      total: 0
+      total: 0,
     },
     popularity: 0,
     genres: [],
   },
+  player: {
+    isPlaying: false,
+    trackURL: '',
+    trackIMG: '',
+  },
   isLoading: false,
-  isPlaying: false,
-  trackURL: '',
-  trackIMG: '',
   auth: false,
   fetch: {
     tracks: {},
     albums: {},
     playlists: {},
-    artists: {}
-  }
+    artists: {},
+  },
 }, action) {
   switch (action.type) {
     case 'TOGGLE_PLAY':
@@ -42,9 +44,11 @@ export default function(state = {
     case 'PLAY_TRACK':
       return {
         ...state,
-        trackURL: action.payload.url,
-        trackIMG: action.payload.img,
-        isPlaying: true,
+        player: {
+          trackURL: action.payload.url,
+          trackIMG: action.payload.img,
+          isPlaying: true,
+        },
       };
     case 'LOADING':
       return {
@@ -61,8 +65,8 @@ export default function(state = {
       return {
         ...state,
         artist: action.payload,
-        isLoading: false
-      }
+        isLoading: false,
+      };
     default:
       return state;
   }

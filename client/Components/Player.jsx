@@ -2,28 +2,27 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 
-class Player extends React.Component {
+class PlayerImage extends React.Component {
   constructor(props) {
-          super(props);
-          this.props = props;
-        }
+    super(props);
+    this.props = props;
+  }
 
   render() {
-          return (<div className="player">
-          {this.props.isPlaying ? <div>
-          <img alt="track logo" className="img-unwrapped" src={this.props.trackIMG !== '' ? this.props.trackIMG : 'http://blueroom.org.au/wp-content/uploads/2016/12/BLANK_SN-Website-760x485.jpg'} />
-          <audio id="audio" autoPlay controls src={this.props.trackURL} /></div> : null }
-        </div>)
- ;}
+    return (<div className="player">
+            {this.props.player.isPlaying ? <div>
+            <img alt="track logo" className="img-unwrapped" src={this.props.player.trackIMG !== '' ? this.props.player.trackIMG : 'http://blueroom.org.au/wp-content/uploads/2016/12/BLANK_SN-Website-760x485.jpg'} />
+            </div> : null }
+          </div>)
+ ;
+ }
 }
 
 
-const PlayerWrapped = connect(
+const PlayerImageWrapped = connect(
     state => ({
-      trackIMG: state.trackIMG,
-      trackURL: state.trackURL,
-      isPlaying: state.isPlaying,
+      player: state.player,
     }),
-    null)(Player);
+    null)(PlayerImage);
 
-export default PlayerWrapped;
+export default PlayerImageWrapped;

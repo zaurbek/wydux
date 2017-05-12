@@ -50,13 +50,13 @@ class Home extends Component {
     return (
       <div className="col-right ">
         <div className="form-group">
-          <input onChange={() => this.props.onSearch(this.searchText.value)} ref={(input) => { this.searchText = input; }} type="text" className="form-control search-bar" placeholder="Search" />
+          <input onChange={() => this.props.onSearch(this.searchText.value)} ref={(input) => { this.searchText = input; }} type="text" className="form-control search-bar" placeholder="Search tracks, albums and artists" />
         </div>
         <div className="page-store">
           {(this.props.albums) ? (<div className=" extra-margin-top "><h3 className="text-center">Albums:</h3><hr /></div>) : null}
           {(this.props.albums) ? this.props.albums.map(item => (
-              <div className="well track-card" key={item.id}>
-                  <Link className="card-link" to={`/album/${item.id}`}><img className="card-img" src={item.images[1] ? item.images[1].url : item.images[0].url}  /><br  />
+              <div className="track-card" key={item.id}>
+                  <Link className="card-link" to={`/album/${item.id}`}><img className="card-img" src={item.images[0] ? item.images[0].url : 'http://vignette3.wikia.nocookie.net/k-anime/images/6/60/No_Image_Available.png/revision/latest?cb=20130418072455'}  />
 
                   <div className='overlay'/><div className="margin-around">{item.name}</div></Link>
 
@@ -68,7 +68,7 @@ class Home extends Component {
           {(this.props.artists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top ">Artists:</h3><hr /></div>) : null}
           {(this.props.artists) ? this.props.artists.map(item => (
               <div className="well track-card" key={item.id}>
-                   <Link className="card-link" to={`/artist/${item.id}`}><img className="card-img" src={item.images[0] ? item.images[0].url : 'http://vignette3.wikia.nocookie.net/k-anime/images/6/60/No_Image_Available.png/revision/latest?cb=20130418072455'}  /><br  />
+                   <Link className="card-link" to={`/artist/${item.id}`}><img className="card-img" src={item.images[0] ? item.images[0].url : 'http://vignette3.wikia.nocookie.net/k-anime/images/6/60/No_Image_Available.png/revision/latest?cb=20130418072455'}  />
 
                   <div className='overlay'/><div className="margin-around">{item.name}</div></Link>
 
