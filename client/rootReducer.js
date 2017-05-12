@@ -20,6 +20,7 @@ export default function (state = {
     isPlaying: false,
     trackURL: '',
     trackIMG: '',
+    trackPlaying: false,
   },
   isLoading: false,
   auth: false,
@@ -34,7 +35,10 @@ export default function (state = {
     case 'TOGGLE_PLAY':
       return {
         ...state,
-        isPLaying: !state.isPLaying,
+        player: {
+          ...state.player,
+          trackPlaying: !state.player.trackPlaying
+        }
       };
     case 'SEARCH':
       return {

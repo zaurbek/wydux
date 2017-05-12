@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { togglePlay } from '../actions'
+
 class PlayerBottom extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +14,11 @@ class PlayerBottom extends Component {
         {this.props.player.isPlaying ?
           <div className="player-bottom">
             <audio id="audio" autoPlay src={this.props.player.trackURL} />
+            <a href='#' onClick={()=>this.props.togglePlay()}><i className={`fa fa-${this.props.player.trackPlaying?'pause':'play'}`} aria-hidden="true"></i></a> 
+            
+            
+            
+            
           </div> 
           
           
@@ -28,7 +35,10 @@ class PlayerBottom extends Component {
 const PlayerBottomWrapped = connect(
     state=>({
         player: state.player,
-    }),null)(PlayerBottom)
+    }),
+    dispatch=>({
+      togglePlay: ()=>dispatch(togglePlay()),
+    }))(PlayerBottom)
 
 
 export default PlayerBottomWrapped;

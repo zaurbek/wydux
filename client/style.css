@@ -1,6 +1,6 @@
 .col-left {
     float: left;
-    height: 100vh;
+    height: 100%;
     width: 200px;
 }
 
@@ -34,6 +34,7 @@ box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
 .player-bottom {
     flex: 0 0 auto;
     position: fixed;
+    height: 50px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -72,7 +73,7 @@ overflow: auto;
 }
 
 .card-link {
-    font-decoration: none;
+    text-decoration: none;
     font-size: 12px;
 }
 
@@ -85,8 +86,12 @@ overflow: auto;
     margin: 10px auto;
 }
 .logo {
-    text-align: center;
     background-color: #222;
+    height: 4vh;
+    width: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .logo a:hover {
     text-decoration: none
@@ -97,7 +102,7 @@ overflow: auto;
 .window {
     background-color: #334;
     width: 200px;
-    height: 100vh;
+    height: 100%;
     -webkit-box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
 -moz-box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
 box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
@@ -115,7 +120,8 @@ box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
 
 .player {
     width: 200px;
-    height: 50vh;
+    height: 100%;
+    min-height: 46vh;
     text-align: center;
     overflow: hidden;
     background-color: #222;
