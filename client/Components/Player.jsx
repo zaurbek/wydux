@@ -10,13 +10,13 @@ class PlayerImage extends React.Component {
 
   render() {
     return (<div className="player">
-    
-            {this.props.player.isPlaying ? <div>
-            <img alt="track logo" className="img-unwrapped" src={this.props.player.trackIMG !== '' ? this.props.player.trackIMG : 'http://blueroom.org.au/wp-content/uploads/2016/12/BLANK_SN-Website-760x485.jpg'} />
-            </div> : null }
-          </div>)
+
+      {this.props.player.isPlaying ? <div>
+        <img alt="track logo" className="img-unwrapped" src={this.props.player.trackIMG !== '' ? this.props.player.trackIMG : 'http://blueroom.org.au/wp-content/uploads/2016/12/BLANK_SN-Website-760x485.jpg'} />
+      </div> : null }
+    </div>)
  ;
- }
+  }
 }
 
 

@@ -1,5 +1,18 @@
 import axios from 'axios';
 
+// Back and forth tracks
+export function playForward() {
+  return {
+    type: 'PLAY_FORWARD',
+  };
+}
+export function playBackward() {
+  return {
+    type: 'PLAY_BACKWARD',
+  };
+}
+
+
 // fetch Album with ID
 function fetchAlbum(id) {
   return axios.get(`https://api.spotify.com/v1/albums/${id}`);
@@ -14,8 +27,8 @@ function plugAlbum(data) {
 }
 
 export function newAlbum(id) {
-  return function(dispatch) {
-    return fetchAlbum(id).then((res) => res.data).then((data) => dispatch(plugAlbum(data)));
+  return function (dispatch) {
+    return fetchAlbum(id).then(res => res.data).then(data => dispatch(plugAlbum(data)));
   };
 }
 
@@ -34,8 +47,8 @@ function plugArtist(data) {
 }
 
 export function newArtist(id) {
-  return function(dispatch) {
-    return fetchArtist(id).then((res) => res.data).then((data) => dispatch(plugArtist(data)));
+  return function (dispatch) {
+    return fetchArtist(id).then(res => res.data).then(data => dispatch(plugArtist(data)));
   };
 }
 
@@ -60,7 +73,7 @@ function plugTracks(fetch) {
   };
 }
 export function newSearch(text) {
-  return function(dispatch) {
+  return function (dispatch) {
     if (text.length > 0) {
       return fetchSearch(text).then(res => res.data).then((data) => {
         console.log(data);
@@ -71,7 +84,7 @@ export function newSearch(text) {
       tracks: {},
       albums: {},
       playlists: {},
-      artists: {}
+      artists: {},
     }));
   };
 }
@@ -83,22 +96,28 @@ export function playTrack(trackObject) {
     const parsed = {
       url: trackObject.preview_url,
       img: trackObject.album.images[1].url,
+      name: trackObject.name,
+      authorID: trackObject.artists[0].id,
+      author: trackObject.artists[0].name,
     };
     return {
       type: 'PLAY_TRACK',
       payload: parsed,
     };
   }
-  else {
+  
     const parsed = {
       url: trackObject.preview_url,
       img: trackObject.album.images[0].url,
+        name: trackObject.name,
+       id: trackObject.artists[0].id,
+        author: trackObject.artists[0].name,
     };
     return {
       type: 'PLAY_TRACK',
       payload: parsed,
     };
-  }
+  
 
 }
 
@@ -108,4 +127,11 @@ export function togglePlay() {
   return {
     type: 'TOGGLE_PLAY',
   };
+}
+
+//Auth 
+export function authed() {
+  return {
+    type: 'AUTH'
+  }
 }

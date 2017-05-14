@@ -3,10 +3,18 @@
 # wyDux
 ### - Unofficial Web Spotify Client created with React and Redux.
 
-##### Some Web API stuff I read to create this project:
-  - https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
-  - https://developer.spotify.com/web-api/using-scopes/
-  - https://labs.spotify.com/2015/03/09/understanding-spotify-web-api/
-  - https://developer.spotify.com/my-applications/#!/applications/3c73ac27f58f4094b9aa02d98a2c4f28
-  - https://github.com/thelinmichael/spotify-web-api-node
-  - https://developer.spotify.com/technologies/widgets/spotify-play-button/
+##### This project was created to practice React and Redux, ~~you can see demo at [Heroku](http://wydux.herokuapp.com).~~ (not yet ready).
+
+##### Highly encourage you to use both Redux and React devtools to 🕵 inspect 🕵 this how this project works.
+
+###### ~~To build you own player on localhost, download or copy repo and run:`npm run build` and `npm start`~~ Not yet ready 🤡.
+
+
+
+
+### *Things to implement:*
+- Authentication
+- Browser user's playlists
+- Browse user's tracks
+
+

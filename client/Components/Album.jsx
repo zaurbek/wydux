@@ -43,7 +43,7 @@ class Album extends Component {
                             <div className="cleat-both">
                               <h4>{this.props.album.name}</h4>
 
-                              <span><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/share" className="twitter-share-button" data-show-count="false">Tweet</a><script src="http://platform.twitter.com/widgets.js" charSet="utf-8" /></span>
+                              <span><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/share?url=http://wydux.herokuapp.com/&text=wyDux - cool Spotify Web Player created with React and Redux"><button className='twitter-share-button'><i className="fa fa-twitter" aria-hidden="true"></i> Tweet</button></a></span>
                               <h5> Type: Album </h5>
 
                               <h5> Label: {this.props.album.label} </h5>
@@ -81,9 +81,9 @@ class Album extends Component {
                               }) }
                             </tbody>
                           </table>
+                                          <h5 className='my-name'><i className="fa fa-code" aria-hidden="true"></i>  with  <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a></h5>
 
                 </div>}
-
           </div>
 
       </div>);

@@ -1,10 +1,11 @@
 {
   "name": "wyDux",
   "version": "1.0.0",
-  "description": "Spotify application",
-  "main": "index.js",
+  "description": "Unofficial Web Spotify Client created with React and Redux.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,16 +18,22 @@
   },
   "homepage": "https://github.com/Zooll8/wydux#readme",
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.17.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "webpack": "^2.5.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "request": "^2.81.0",
+    "spotify-web-api-node": "^2.4.0"
   }
 }

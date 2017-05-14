@@ -15,6 +15,9 @@ class Home extends Component {
     super(props);
     this.props = props;
   }
+  componentDidMount() {
+    this.searchText.focus();
+  }
   tableTracks() {
     return (
         <table className="table table-striped table-hover">
@@ -31,7 +34,7 @@ class Home extends Component {
     {this.props.tracks.map((item, index) => (
 
       <tr key={index}>
-              <td><button className="btn btn-xs btn-success" href='#' onClick={()=>this.props.playTrack(item)}><i className="fa fa-play" aria-hidden="true"></i></button></td>
+              <td><button className="btn btn-xs btn-success" onClick={()=>this.props.playTrack(item)}><i className="fa fa-play" aria-hidden="true"></i></button></td>
               <td>{item.artists[0].name}</td>
               <td>{item.name}</td>
               <td className="tracks--table--progress"><div className="progress">
@@ -77,19 +80,10 @@ class Home extends Component {
                       )) : null
               }
           <div className="clear-both" />
-          {/*(this.props.playlists) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Playlists:</h3><hr /></div>) : null}
-          {(this.props.playlists) ? this.props.playlists.map(item => (
-              <div className="well track-card" key={item.id}>
-                   <Link to={`/playlist/${item.id}`}><img className="card-img" src={item.images.length > 1 ? item.images[1].url:item.images[0].url}  /><br  />
-
-                  {item.name}</Link>
-
-
-                </div>
-                      )) : null
-            */  }
           {(this.props.tracks) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Tracks:</h3><hr /></div>) : null}
           {(this.props.tracks) ? this.tableTracks() : null }
+          {(this.props.tracks) ? <hr/>: null }
+          <h5 className='my-name'><i className="fa fa-code" aria-hidden="true"></i>  with  <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a></h5>
         </div>
         
       </div>
