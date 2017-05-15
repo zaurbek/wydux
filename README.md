@@ -5,7 +5,7 @@
 
 
 
-##### This project was created to practice React and Redux, ~~you can see demo at [Heroku](http://wydux.herokuapp.com).~~ (not yet ready).
+##### This project was created to practice React and Redux, you can see demo at [Heroku](http://wydux.herokuapp.com).
 
 ##### Highly encourage you to use both Redux and React devtools to 🕵 inspect 🕵 this how this project works.
 
