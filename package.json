@@ -7,9 +7,9 @@
     "build": "npm install",
     "start": "node server.js"
   },
-  "engines":{
-    "node":"4.6.1",
-    "npm":"2.15.9"
+  "engines": {
+    "node": "4.6.1",
+    "npm": "2.15.9"
   },
   "repository": {
     "type": "git",
