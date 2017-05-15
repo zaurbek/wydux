@@ -82,8 +82,8 @@ class Home extends Component {
           <div className="clear-both" />
           {(this.props.tracks) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Tracks:</h3><hr /></div>) : null}
           {(this.props.tracks) ? this.tableTracks() : null }
-          {(this.props.tracks) ? <hr/>: null }
-          <h5 className='my-name'><i className="fa fa-code" aria-hidden="true"></i>  with  <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a></h5>
+          {(this.props.tracks) ? <div><hr/><h6 className='my-name'><i className="fa fa-code" aria-hidden="true"></i>  with  <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a></h6></div>: null }
+          
         </div>
         
       </div>

@@ -45,7 +45,7 @@ box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
     flex: 0 0 auto;
     position: fixed;
     display: flex;
-    
+    min-width: 750px;
     height: 50px;
     bottom: 0;
     left: 0;

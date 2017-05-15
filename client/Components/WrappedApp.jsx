@@ -8,7 +8,6 @@ import Album from './Album.jsx';
 import Artist from './Artist.jsx';
 import NotLogged from './NotLogged.jsx';
 import Private from './Private.jsx';
-import Gates from './Gates.jsx';
 
 
 const Main = () => (
@@ -33,9 +32,7 @@ const Main = () => (
         <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/album/:id" component={Album} />
-        <Route path="/user/album/:id" component={Album} />
         <Route path="/artist/:id" component={Artist} />
-        <Route path="/user/artist/:id" component={Artist} />
         <Route component={Home} />
         </Switch>
       </div>

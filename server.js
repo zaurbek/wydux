@@ -43,10 +43,12 @@ app.get('/api/callback', (req, res) => {
   }
 });
 
+/*
 app.get('/api/login', (req, res) => {
-  res.redirect('https://accounts.spotify.com/en/authorize?response_type=code&redirect_uri=http:%2F%2Flocalhost:8080%2Fapi%2Fcallback&client_id=a4a8e06faf484969acb7ccf28a8fbe58&scope=user-read-private%20playlist-read-private%20user-top-read%20playlist-read-collaborative%20user-follow-read%20user-library-read');
+  res.redirect('https://accounts.spotify.com/en/authorize?response_type=code&redirect_uri=http:%2F%2Fwydux-zooll.c9users.io%2Fapi%2Fcallback&client_id=a4a8e06faf484969acb7ccf28a8fbe58&scope=user-read-private%20playlist-read-private%20user-top-read%20playlist-read-collaborative%20user-follow-read%20user-library-read');
 });
 
+*/
 // static routes
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(`${__dirname}/index.html`));
