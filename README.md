@@ -1,4 +1,4 @@
-[![wyDux Picture](https://dl.dropboxusercontent.com/s/unm353xv2ju7876/2017-05-14_18-50-31.png?dl=0)](https://github.com/Zooll8/wyDux)
+[![wyDux Picture](https://dl.dropboxusercontent.com/s/6gj0eifdm20r7o6/2017-05-19_18-15-57.png?dl=00)](https://github.com/Zooll8/wyDux)
 
 # 🎧 wyDux 
 ### - Unofficial Web Spotify Client created with React and Redux.
