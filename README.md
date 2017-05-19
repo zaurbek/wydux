@@ -9,14 +9,8 @@
 
 ##### Highly encourage you to use both Redux and React devtools to 🕵 inspect 🕵 this how this project works.
 
-###### ~~To build you own player on localhost, download or copy repo and run:`npm run build` and `npm start`~~ Not yet ready 🤡.
+###### To build you own player on localhost, download or copy repo and run:`npm run build` and `npm start`
 
 
-
-
-### *Things to implement:*
-- Authentication
-- Browser user's playlists
-- Browse user's tracks
 
 

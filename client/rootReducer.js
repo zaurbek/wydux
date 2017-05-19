@@ -54,40 +54,42 @@ export default function (state = {
       if (state.player.playlist.length > 0) {
         if (state.player.playlist[state.player.playlist.length - 1].trackURL == action.payload.url) {
           return {
-    ...state,
-    player: {
-            trackURL: action.payload.url,
-            trackIMG: action.payload.img,
-            isPlaying: true,
-            name: action.payload.name,
-            author: action.payload.author,
-            authorID: action.payload.authorID,
-            playlist: [...state.player.playlist],
-            pointer: state.player.pointer,
-          },
-  };
+            ...state,
+            player: {
+              trackURL: action.payload.url,
+              trackIMG: action.payload.img,
+              isPlaying: true,
+              name: action.payload.name,
+              author: action.payload.author,
+              authorID: action.payload.authorID,
+              playlist: [...state.player.playlist],
+              pointer: state.player.pointer,
+            },
+          };
         }
       }
 
       return {
         ...state,
         player: {
-        trackURL: action.payload.url,
-        trackIMG: action.payload.img,
-        isPlaying: true,
-        name: action.payload.name,
-        author: action.payload.author,
-        authorID: action.payload.authorID,
-        playlist: [...state.player.playlist, {
-            trackURL: action.payload.url,
-            trackIMG: action.payload.img,
-            name: action.payload.name,
-            author: action.payload.author,
-            authorID: action.payload.id,
-          }],
-        trackPlaying: true,
-        pointer: state.player.playlist.length,
-      },
+          trackURL: action.payload.url,
+          trackIMG: action.payload.img,
+          isPlaying: true,
+          name: action.payload.name,
+          author: action.payload.author,
+          authorID: action.payload.authorID,
+          playlist: [
+            ...state.player.playlist, {
+              trackURL: action.payload.url,
+              trackIMG: action.payload.img,
+              name: action.payload.name,
+              author: action.payload.author,
+              authorID: action.payload.id,
+            },
+          ],
+          trackPlaying: true,
+          pointer: state.player.playlist.length,
+        },
       };
 
     case 'LOADING':
@@ -109,9 +111,9 @@ export default function (state = {
       };
     case 'AUTH':
       return {
-      ...state,
-      auth: true,
-    };
+        ...state,
+        auth: true,
+      };
     case 'PLAY_FORWARD':
       if (state.player.playlist.length > 0) {
         if (state.player.playlist[state.player.pointer + 1]) {
@@ -135,7 +137,7 @@ export default function (state = {
     case 'PLAY_BACKWARD':
 
       if (state.player.playlist.length > 0) {
-      if (state.player.playlist[state.player.pointer - 1]) {
+        if (state.player.playlist[state.player.pointer - 1]) {
           return {
             ...state,
             player: {
@@ -151,7 +153,7 @@ export default function (state = {
             },
           };
         }
-    }
+      }
       return state;
     default:
       return state;

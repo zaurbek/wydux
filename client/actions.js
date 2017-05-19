@@ -129,9 +129,3 @@ export function togglePlay() {
   };
 }
 
-//Auth 
-export function authed() {
-  return {
-    type: 'AUTH'
-  }
-}
