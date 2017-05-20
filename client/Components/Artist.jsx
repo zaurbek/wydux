@@ -74,12 +74,9 @@ class Album extends Component {
                                         Popularity: {`${this.props.artist.popularity}%`}</h5>
                                 </div>
                             </div>
-                          <h6 className="my-name"><i className="fa fa-code" aria-hidden="true"  />
-                                with
-                                <i className="fa fa-heart" aria-hidden="true"  />
-                                by
-                                <a href="https://github.com/zooll8/wydux" target="_blank">Zaurbek Zhakupov</a>
-                            </h6>
+                          <h6 className='my-name'>
+                <i className="fa fa-code" aria-hidden="true"></i> with <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a>
+              </h6>
 
                         </div>}
                 </div>

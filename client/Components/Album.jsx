@@ -119,11 +119,7 @@ class Album extends Component {
                 </tbody>
               </table>
               <h6 className='my-name'>
-                <i className="fa fa-code" aria-hidden="true"></i>
-                with
-                <i className="fa fa-heart" aria-hidden="true"></i>
-                by
-                <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a>
+                <i className="fa fa-code" aria-hidden="true"></i> with <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a>
               </h6>
 
             </div>}

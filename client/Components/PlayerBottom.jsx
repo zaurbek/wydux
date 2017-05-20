@@ -26,7 +26,6 @@ class PlayerBottom extends Component {
   addListeners() {
     if (!this.state.added) {
       this.audioPlayer.addEventListener('timeupdate', () => {
-        console.log(this.audioPlayer.currentTime);
         this.watcher();
         const ratio = this.audioPlayer.currentTime / this.audioPlayer.duration;
         const coords = this.time.offsetLeft + (this.time.offsetWidth * ratio);
@@ -42,12 +41,17 @@ class PlayerBottom extends Component {
       (this.props.player.name !== this.state.old ? this.addListeners() : null)
      : null; }
   }
+  componentDidMount() {
+    { this.props.player.isPlaying ?
+      this.addListeners()
+     : null; }
+  }
   mouseFrom(event) {
     window.removeEventListener('mouseup', this.mouseFrom(event));
     window.removeEventListener('mousemove', this.mouseChange(event));
   }
   watcher() {
-    this.setState({ added: true, time: (isNaN(this.audioPlayer.duration) ? '0: 0 / 0: 30' : `0: ${Math.floor(this.audioPlayer.currentTime)} / 0: ${Math.floor(this.audioPlayer.duration)}`), old: this.props.player.name });
+    this.setState({ added: true, time: (isNaN(this.audioPlayer.duration) ? '0: 00 / 0: 30' : `0: ${Math.floor(this.audioPlayer.currentTime)} / 0: ${Math.floor(this.audioPlayer.duration)}`), old: this.props.player.name });
   }
   mouseChange(event) {
     const nextTime = ((event.pageX - this.time.offsetLeft) / this.time.offsetWidth) * this.audioPlayer.duration;
@@ -100,18 +104,21 @@ class PlayerBottom extends Component {
     if (this.audioPlayer && this.props.player.isPlaying) {
       return `glyphicon glyphicon-volume-off ${this.audioPlayer.muted ? 'highlight' : ''}`;
     }
+    return 'glyphicon glyphicon-volume-off';
   }
   getVolume() {
     if (this.audioPlayer && this.props.player.isPlaying) {
-      return this.audioPlayer.muted ? '0':this.state.volume;
-    }
+      return this.audioPlayer.muted ? '0%' : `${this.state.volume*100}%`;
+    } 
+      return '100%';
+    
   }
   render() {
     return (
       <div>
         {this.props.player.isPlaying ?
           <div className="player-bottom">
-            <audio ref={(audio) => { this.audioPlayer = audio; }} autoPlay src={this.props.player.trackURL} />
+            <audio ref={(audio) => { this.audioPlayer = audio; }} autoPlay={!!this.props.player.trackPlaying} src={this.props.player.trackURL} />
             <div className="track-data">
               <div className="track-name">{this.props.player.name}</div>
               <div className="track-artist"><Link to={this.props.player.authorID ? `/artist/${this.props.player.authorID}` : ''}>{this.props.player.author}</Link></div>

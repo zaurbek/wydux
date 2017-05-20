@@ -1,28 +1,27 @@
 .col-left {
     float: left;
-    height: 100%;
+    height: 100vh;
     width: 200px;
 }
 
 .col-right {
-    overflow: auto;
+    overflow:auto;
     height: 100vh;
-    background-color: #222222;
+    background-color:#222222;
     padding-bottom: 80px;
 }
-
 .top-ref {
     height: 300px;
     width: 600px;
     display: flex;
     margin: 40px auto;
+    
     padding: 10px;
     background-color: #333;
-    -webkit-box-shadow: -4px 19px 26px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -4px 19px 26px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: -4px 19px 26px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
 }
-
 .volume {
     height: 50px;
     font-size: 14px;
@@ -34,30 +33,32 @@
     float: right;
     align-self: center;
 }
-
 .content {
     flex: 1 0 auto;
+    
+  overflow: hidden;
 }
-
 .browser-window {
     display: flex;
-    flex-direction: column;
-    height: 100%;
+  flex-direction: column;
+  height: 100%;
 }
-
+.track-name-left {
+    float: left;
+}
 .player-bottom {
     flex: 0 0 auto;
     position: fixed;
     display: flex;
-    min-width: 750px;
+    min-width: 800px;
     height: 50px;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #333;
-    -webkit-box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px -5px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -5px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -5px 40px 0px rgba(0,0,0,0.75);
 }
 
 .top-ref-image {
@@ -72,12 +73,13 @@
     width: 800px;
     display: flex;
     margin: 40px auto;
+    
     padding: 10px;
     background-color: #333;
-    -webkit-box-shadow: -4px 19px 26px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -4px 19px 26px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: -4px 19px 26px -4px rgba(0, 0, 0, 0.75);
-    overflow: auto;
+    -webkit-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+box-shadow: -4px 19px 26px -4px rgba(0,0,0,0.75);
+overflow: auto;
 }
 
 .top-ref-artist-image {
@@ -96,45 +98,45 @@
     color: #222;
     text-decoration: none
 }
-
 .page-store {
     width: 990px;
     margin: 10px auto;
 }
-
 .logo {
     background-color: #222;
     height: 4vh;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .logo a:hover {
     text-decoration: none
 }
-
 .track-card a:hover {
     text-decoration: none
 }
-
+.track-artist-left {
+    
+}
 .window {
     background-color: #334;
     width: 200px;
     height: 100%;
-    -webkit-box-shadow: 4px 1px 17px 6px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 4px 1px 17px 6px rgba(0, 0, 0, 0.75);
-    box-shadow: 4px 1px 17px 6px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
+box-shadow: 4px 1px 17px 6px rgba(0,0,0,0.75);
 }
 
 .user {
     width: 200px;
     height: 50vh;
     padding: 10px;
-    display: table;
+    display: table; 
     font-size: 20px;
 }
+
+
 
 .player {
     width: 200px;
@@ -158,108 +160,99 @@
 
 .play-btn {
     margin: 0 auto;
+    
 }
 
 .from-top {
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
+    text-align:center; 
+  vertical-align: middle;
+  display: table-cell; 
 }
-
 button:focus {
-    outline: 0 !important;
-    ;
+    outline:0 !important;;
 }
 
 .track-data {
     float: left;
     width: 200px;
+    
     padding: 5px;
 }
-
+.track-data-left {
+    float: left;
+    width: 200px;
+    padding: 5px;
+}
 .track-name {
     display: inline-block;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 200px;
-    margin-bottom: -10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  margin-bottom: -10px;
 }
-
 .play-element {
     height: 100%;
     color: #fff8f8;
 }
-
 .play-element:hover {
     color: #fff8f8;
 }
-
 .play-element:active {
     color: #fff8f8;
 }
-
 .my-name {
     text-align: left;
 }
-
 .highlight {
-    color: rgb(12, 227, 142) !important;
+    color: rgb(12,227,142) !important;
 }
-
-.time {
+.time{
     margin-top: 15px;
     height: 20px;
-    background-color: #444;
+    background-color: #444; 
     display: inline-block;
     flex-grow: 100;
 }
-
-.handle {
-    width: 14px;
-    height: 30px;
-    background-color: #222;
-    margin-top: -4px;
+.handle{
+	width: 14px;
+	height: 30px;
+	background-color: #222;
+    margin-top:-4px;
 }
-
 .player-controls {
     margin-top: 3px;
     float: left;
     width: 250px;
 }
-
 .player-volume {
     margin-top: 3px;
     float: right;
     width: 200px;
-}
 
+}
 .left {
     float: left;
 }
-
 .right {
     float: right;
 }
-
 .twitter-share-button {
     color: white;
-    background-color: #4099FF;
+    background-color:#4099FF;
     border-radius: 4px;
     border: 1px solid #4099FF;
 }
-
 .search-bar {
     border-radius: 30px;
     width: 270px;
     align-self: center;
     margin: 10px auto;
+    
 }
-
 .margin-around {
     margin: 10px;
 }
-
 .track-card {
     position: relative;
     width: 145px;
@@ -267,46 +260,52 @@ button:focus {
     float: left;
     margin: 10px;
     padding: 0px !important;
-    -webkit-box-shadow: 6px 10px 35px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 35px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 35px 1px rgba(0, 0, 0, 0.75);
-    background-color: #333;
+    -webkit-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
+box-shadow: 6px 10px 35px 1px rgba(0,0,0,0.75);
+background-color: #333;
     color: #FFF;
     overflow: hidden;
 }
-
-.track-card:hover .overlay {
+.track-card:hover .overlay{
     opacity: 0.4;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #777;
-}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #777;
+}
 .extra-margin-top {
     margin-top: 45px;
 }
+
 
 .clear-both {
     clear: both;
 }
 
+.clear-both-2 {
+    clear: both;
+    margin-bottom: -19px;
+}
+
 .card-img {
     height: 145px;
     width: 145px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
+
 
 td {
     vertical-align: middle !important;
@@ -325,3 +324,4 @@ td {
 .right-margin {
     margin-bottom: 100px;
 }
+

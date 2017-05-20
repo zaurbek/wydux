@@ -99,26 +99,26 @@ export function playTrack(trackObject) {
       name: trackObject.name,
       authorID: trackObject.artists[0].id,
       author: trackObject.artists[0].name,
+      duration: trackObject.duration_ms,
     };
     return {
       type: 'PLAY_TRACK',
       payload: parsed,
     };
   }
-  
-    const parsed = {
+
+  const parsed = {
       url: trackObject.preview_url,
       img: trackObject.album.images[0].url,
-        name: trackObject.name,
-       id: trackObject.artists[0].id,
-        author: trackObject.artists[0].name,
+      name: trackObject.name,
+      id: trackObject.artists[0].id,
+      author: trackObject.artists[0].name,
+      duration: trackObject.duration_ms,
     };
-    return {
+  return {
       type: 'PLAY_TRACK',
       payload: parsed,
     };
-  
-
 }
 
 

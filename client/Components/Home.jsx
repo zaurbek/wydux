@@ -7,6 +7,9 @@ import { onSearch, newSearch, playTrack } from '../actions';
 export function msToMS(ms) {
   let minutes = Math.floor(ms / 60000);
   let seconds = Math.floor(ms / 1000) % 60;
+  if (seconds<10) {
+    seconds=`0${seconds}`;
+  }
   return `${minutes}:${seconds}`;
 }
 
@@ -82,7 +85,9 @@ class Home extends Component {
           <div className="clear-both" />
           {(this.props.tracks) ? (<div className=" extra-margin-top "><h3 className="text-center extra-margin-top">Tracks:</h3><hr /></div>) : null}
           {(this.props.tracks) ? this.tableTracks() : null }
-          {(this.props.tracks) ? <div><hr  /><h6 className="my-name"><i className="fa fa-code" aria-hidden="true" />  with   <i className="fa fa-heart" aria-hidden="true" /> by <a href="https://github.com/zooll8/wydux" target="_blank">Zaurbek Zhakupov</a></h6></div> : null }
+          {(this.props.tracks) ? <div><hr  /><h6 className='my-name'>
+                <i className="fa fa-code" aria-hidden="true"></i> with <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a>
+              </h6></div> : null }
 
         </div>
 
