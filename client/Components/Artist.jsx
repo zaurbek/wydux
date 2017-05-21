@@ -25,9 +25,9 @@ class Album extends Component {
   render() {
       return (
           <div className="col-right">
-              <div className="page-store">
+            <div className="page-store">
                   {this.props.loading
-                        ? <h1>Loading..</h1>
+                        ? <h1 className='text-center'>Loading..</h1>
                         : <div>
                           <div className="top-ref-artist">
                               <img
@@ -46,8 +46,7 @@ class Album extends Component {
                                           href="https://twitter.com/share?url=http://wydux.herokuapp.com/&text=wyDux - cool Spotify Web Player created with React and Redux"
                                         >
                                           <button className="twitter-share-button">
-                                              <i className="fa fa-twitter" aria-hidden="true"  />
-                                                Tweet</button>
+                                              <i className="fa fa-twitter" aria-hidden="true"  /> Tweet</button>
                                         </a>
                                     </span>
                                   <h5>
@@ -74,9 +73,9 @@ class Album extends Component {
                                         Popularity: {`${this.props.artist.popularity}%`}</h5>
                                 </div>
                             </div>
-                          <h6 className='my-name'>
-                <i className="fa fa-code" aria-hidden="true"></i> with <i className="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/zooll8/wydux' target='_blank'>Zaurbek Zhakupov</a>
-              </h6>
+                          <span className="my-name">
+            <i className="fa fa-code" aria-hidden="true" /> with <i className="fa fa-heart" aria-hidden="true" /> by <a href="https://github.com/zooll8/wydux" target="_blank">Zaurbek Zhakupov</a>
+          </span><span style={{float:'right'}}><a href='https://github.com/zooll8/wydux' target='_blank'>Github</a> </span>
 
                         </div>}
                 </div>

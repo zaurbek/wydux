@@ -18,14 +18,7 @@ export default function (state = {
   },
   player: {
     isPlaying: true,
-    playlist: [{
-  "trackURL": "https://p.scdn.co/mp3-preview/c6f693ae5275fa2693450cb3fcbe4321d7bf0f2e?cid=null",
-  "trackIMG": "https://i.scdn.co/image/31327f9fe6b6e0bd6e431a4add681397e95c6329",
-  "name": "Something - Remastered",
-  "author": "The Beatles",
-  "authorID": "3WrFJ7ztbogyGnTHbHJFl2",
-  "duration": 182293
-}],
+    playlist: [],
     trackURL: 'https://p.scdn.co/mp3-preview/c6f693ae5275fa2693450cb3fcbe4321d7bf0f2e?cid=null',
     trackIMG: 'https://i.scdn.co/image/31327f9fe6b6e0bd6e431a4add681397e95c6329',
     trackPlaying: false,

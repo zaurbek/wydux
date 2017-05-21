@@ -13,7 +13,7 @@ const Main = () => (
     <div className="browser-window">
       <div className="content">
         <div className="col-left">
-
+        
           <div className="window">
             <div className="logo">
               <Link to="/"><i className="fa fa-headphones" aria-hidden="true" /> wyDux</Link>
