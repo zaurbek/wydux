@@ -3,6 +3,9 @@
 ### - Unofficial Web Spotify Client created with React and Redux.
 
 
+#### **Project is temporarly frozen** because of the Spotify *new Web API* changes, however, you still can investigate the first page to see how this project used to work. (thanks to initial Store in Redux)
+
+
 
 ##### This project was created to practice React and Redux, you can see demo at [Heroku](http://wydux.herokuapp.com).
 
